@@ -7,14 +7,13 @@ public class Shelf {
     private int number;
     private int rows;
     private int columns;
-    private Cask[][] casks;
-    Warehouse warehouse;
+    private ArrayList<Cask>[][] casks;
 
     public Shelf(int number, int rows, int columns) {
         this.number = number;
         this.rows = rows;
         this.columns = columns;
-        this.casks = new Cask[rows][columns];
+        this.casks = new ArrayList<Cask>[rows][columns];
     }
     public void addCask(Cask cask, int rowIn, int columnIn) {
         int row = rowIn - 1;
