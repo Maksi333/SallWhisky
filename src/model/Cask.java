@@ -7,7 +7,7 @@ public class Cask {
     private String description;
     private String caskType;
     private double volume;
-    //private boolean newMake;
+
     private LocalDate startDate;
     private int numberOfUses;
     private String signature;
