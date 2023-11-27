@@ -7,7 +7,7 @@ public class Destillat {
     private LocalDate startDate;
     private LocalDate endDate;
     private String employeeName;
-    private String farmer;
+    private String farmerName;
     private String fieldName;
     private String grainType;
     private String malthBatch;
@@ -16,13 +16,13 @@ public class Destillat {
     private String smokeMaterial;
     private String description;
 
-    public Destillat(int destillat_ID, LocalDate startDate, LocalDate endDate, String employeeName, String farmer,
+    public Destillat(int destillat_ID, LocalDate startDate, LocalDate endDate, String employeeName, String farmerName,
                      String fieldName, String grainType, String malthBatch, double volume, double alcoholPercentage) {
         this.destillat_ID = destillat_ID;
         this.startDate = startDate;
         this.endDate = endDate;
         this.employeeName = employeeName;
-        this.farmer = farmer;
+        this.farmerName = farmerName;
         this.fieldName = fieldName;
         this.grainType = grainType;
         this.malthBatch = malthBatch;
