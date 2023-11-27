@@ -23,4 +23,8 @@ public class Cask {
         this.numberOfUses = numberOfUses;
         this.signature = signature;
     }
+
+    public int getCaskNumber() {
+        return caskNumber;
+    }
 }

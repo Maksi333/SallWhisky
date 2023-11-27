@@ -22,7 +22,7 @@ public class Shelf {
         if (row >= 0 && row < rows && column >= 0 && column < columns) {
             if (casks[row][column] == null) {
                 casks[row][column] = cask;
-                System.out.println("" + cask.getName() + " added to row " + row + ", column " + column);
+                System.out.println("" + cask.getCaskNumber() + " added to row " + row + ", column " + column);
             } else {
                 System.out.println("There is already a cask in this position");
             }
