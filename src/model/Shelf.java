@@ -15,7 +15,9 @@ public class Shelf {
         this.columns = columns;
         this.pallets = new List[rows][columns];
     }
-
+    /**
+     * Tilføjer et fad til en palle på en hylde.
+     */
     public void addCask(Cask cask, int rowIn, int columnIn) {
         int row = rowIn - 1;
         int column = columnIn - 1;

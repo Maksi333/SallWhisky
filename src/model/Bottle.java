@@ -2,9 +2,10 @@ package model;
 
 public class Bottle {
     private int size;
-    private WhiskyLiquid whiskyLiquid;
+    private FinishedProduct finishedProduct;
 
-    public Bottle(int size){
+    public Bottle(int size, FinishedProduct finishedProduct){
         this.size = size;
+        this.finishedProduct = finishedProduct;
     }
 }
