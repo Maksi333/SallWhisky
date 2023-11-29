@@ -41,10 +41,21 @@ public class WindowMain extends Application {
     private VBox headerPane = new VBox();
     private HBox hbxPathButtonContainer = new HBox();
     private void initHeader(){
+        VBox vbxTitle = new VBox();
+        VBox.setVgrow(vbxTitle, Priority.ALWAYS);
+        vbxTitle.setAlignment(Pos.TOP_CENTER);
         Label lblTitle = new Label("\uD83C\uDF46 \uD83D\uDCA6");
         lblTitle.getStyleClass().add("main-title");
+        vbxTitle.getChildren().add(lblTitle);
+
         Button btnRoot = new PathButton("/");
-        headerPane.getChildren().addAll(lblTitle, hbxPathButtonContainer);
+
+        hbxPathButtonContainer.getStyleClass().add("path-container");
+        hbxPathButtonContainer.setAlignment(Pos.BOTTOM_CENTER);
+        hbxPathButtonContainer.maxWidthProperty().bind(mainPane.widthProperty().divide(2));
+
+
+        headerPane.getChildren().addAll(vbxTitle, hbxPathButtonContainer);
         headerPane.getStyleClass().add("overlay-pane");
         headerPane.setPrefHeight(100);
         headerPane.setAlignment(Pos.TOP_CENTER);
