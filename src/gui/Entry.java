@@ -15,6 +15,8 @@ public class Entry extends Button {
     private void entryAction(){
         //TODO: set styling and picture
 
+        //TODO: if selected, step down tree - else select and show context buttons
+
         //TODO: this is wrong, mark as selected instead
         window.setContextPaneButtons(entry);
     }
