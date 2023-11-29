@@ -1,0 +1,81 @@
+.root-pane {
+    -fx-background-color: #222831;
+}
+
+.overlay-pane {
+    -fx-background-color: #343541;
+}
+
+.text {
+
+}
+
+.main-title {
+    -fx-text-fill: #cbc4cb;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Arial';
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0); /* Add a subtle drop shadow */
+    -fx-alignment: center;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+    -fx-border-color: #61dafb;
+}
+
+.path-container {
+    -fx-background-color: #2e3b4e;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+.path-button {
+    -fx-background-color: transparent; -fx-border-color: transparent;
+}
+
+.path-button:hover {
+    -fx-background-color: lightgray;
+}
+
+.header-text {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.content-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #d3d3d3;
+}
+
+.subtle-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #a5a5a5;
+}
+
+/* Slider Style */
+.slider {
+    -fx-control-inner-background: #394045;
+}
+
+.slider .track {
+    -fx-background-color: #565c63; /* Color of the slider track */
+    -fx-padding: 0.20em;
+}
+
+.slider .thumb {
+    -fx-background-color: #7ba6d2; /* Color of the slider thumb */
+    -fx-background-insets: 0, 1, 2; /* Border insets for the thumb */
+    -fx-background-radius: 6; /* Border radius for the thumb */
+    -fx-padding: 0.4em;
+}
+
+.slider .thumb:hover {
+    -fx-background-color: #75e4ff; /* Hover color of the slider thumb */
+}
+
+.slider .thumb:pressed {
+    -fx-background-color: #3e82a7; /* Pressed color of the slider thumb */
+}
