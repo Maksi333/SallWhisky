@@ -43,7 +43,7 @@ public class WindowMain extends Application {
     private VBox headerPane = new VBox();
     private HBox hbxPathButtonContainer = new HBox();
     private void initHeader(){
-        Label lblTitle = new Label("\uD83C\uDF46 \uD83D\uDCA6 \uD83D\uDD1E");
+        Label lblTitle = new Label("\uD83C\uDF46 \uD83D\uDCA6");
         lblTitle.getStyleClass().add("main-title");
         Button btnRoot = new PathButton("/");
         headerPane.getChildren().addAll(lblTitle, hbxPathButtonContainer);
@@ -79,8 +79,8 @@ public class WindowMain extends Application {
     private VBox contextPane = new VBox();
     private VBox contextButtons = new VBox();
     private void initContextPane(){
-        contextPane.getStyleClass().add("overlay-pane");
-        contextPane.setPrefWidth(100);
+        contextPane.getStyleClass().add("context-pane");
+        contextPane.setPrefWidth(125);
 
         //non-context area
         VBox vbxNonContext = new VBox();

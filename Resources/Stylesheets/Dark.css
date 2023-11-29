@@ -66,21 +66,21 @@
 }
 
 .slider .track {
-    -fx-background-color: #565c63; /* Color of the slider track */
+    -fx-background-color: #565c63;
     -fx-padding: 0.20em;
 }
 
 .slider .thumb {
-    -fx-background-color: #7ba6d2; /* Color of the slider thumb */
-    -fx-background-insets: 0, 1, 2; /* Border insets for the thumb */
-    -fx-background-radius: 6; /* Border radius for the thumb */
+    -fx-background-color: #7ba6d2;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 6;
     -fx-padding: 0.4em;
 }
 
 .slider .thumb:hover {
-    -fx-background-color: #75e4ff; /* Hover color of the slider thumb */
+    -fx-background-color: #75e4ff;
 }
 
 .slider .thumb:pressed {
-    -fx-background-color: #3e82a7; /* Pressed color of the slider thumb */
+    -fx-background-color: #3e82a7;
 }
