@@ -2,11 +2,10 @@ package gui;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 
-public class ContextMenu {
+public class ContextButtons {
 
     private static VBox shelfContextMenu;
     private static VBox caskContextMenu;
@@ -33,7 +32,7 @@ public class ContextMenu {
      * @param entry
      * @return Correct VBox depending on what is clicked
      */
-    public static VBox generateContextMenu(Object entry) {
+    public static VBox getContextButtons(Object entry) {
         switch (entry.getClass().getName()) {
             case "Shelf":
                 return shelfContextMenu;

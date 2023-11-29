@@ -12,7 +12,9 @@ public class Entry extends Button {
     }
 
     private void entryAction(){
-        //TODO: set highlight styling
+        //TODO: set styling and picture
+
+        //TODO: this is wrong, mark as selected instead
         window.setContextPaneButtons(entry);
     }
 

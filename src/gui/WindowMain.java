@@ -16,8 +16,6 @@ public class WindowMain extends Application {
 
     private BorderPane mainPane = new BorderPane();
 
-
-
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("Sall Whisky Inventory Management");
@@ -76,22 +74,32 @@ public class WindowMain extends Application {
 
     }
 
-    private VBox contextPane = new VBox();
-    private VBox contextButtons = new VBox();
+    private VBox contextPane = new VBox(10);
     private void initContextPane(){
         contextPane.getStyleClass().add("context-pane");
         contextPane.setPrefWidth(125);
+        contextPane.setAlignment(Pos.CENTER);
+        contextPane.setPadding(new Insets(10));
 
-        //non-context area
         VBox vbxNonContext = new VBox();
-        Button btnAddWarehouse = new Button();
-        btnAddWarehouse.getStyleClass().add("button");
+        //region non-context area
+        Label lblSpacer = new Label("---");
+        lblSpacer.getStyleClass().add("subtle-text");
 
+        Button btnTest = new Button("Test button");
+        btnTest.getStyleClass().add("button");
+        vbxNonContext.getChildren().addAll(lblSpacer, btnTest);
+        vbxNonContext.setAlignment(Pos.BOTTOM_CENTER);
+
+        VBox vbxNull = new VBox();
+        contextPane.getChildren().addAll(vbxNull, vbxNonContext);
+        VBox.setVgrow(vbxNull, Priority.ALWAYS);
+        //endregion
     }
 
     public void setContextPaneButtons(Object entry){
-        contextButtons.getChildren().remove(0);
-        contextButtons.getChildren().add(0, ContextMenu.generateContextMenu(entry));
+        contextPane.getChildren().remove(0);
+        contextPane.getChildren().add(0, ContextButtons.getContextButtons(entry));
     }
 
     private void updateFooterLabel(){

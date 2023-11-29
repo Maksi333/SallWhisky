@@ -10,10 +10,6 @@
     -fx-background-color: #2c2f37;
 }
 
-.text {
-
-}
-
 .main-title {
     -fx-text-fill: #cbc4cb;
     -fx-font-size: 24px;
@@ -23,12 +19,28 @@
     -fx-alignment: center;
 }
 
+
+
 .button {
     -fx-text-fill: white;
     -fx-font-size: 14px;
-    -fx-background-color: transparent;
-    -fx-border-color: #61dafb;
+    -fx-background-color: rgba(128, 128, 128, 0.1);
+    -fx-border-color: transparent;
 }
+
+.button:hover {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+    -fx-border-color: #7ba6d2;
+}
+
+.button:pressed {
+    -fx-background-color: rgba(128, 128, 128, 0.5);
+    -fx-border-color: transparent;
+}
+
+/* Path Style */
 
 .path-container {
     -fx-background-color: #2e3b4e;
@@ -43,6 +55,8 @@
 .path-button:hover {
     -fx-background-color: lightgray;
 }
+
+/* Text Style */
 
 .header-text {
     -fx-font-size: 18px;
@@ -60,6 +74,7 @@
 }
 
 /* Slider Style */
+
 .slider {
     -fx-control-inner-background: #394045;
     -fx-alignment: center;
