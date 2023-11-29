@@ -15,7 +15,6 @@ import javafx.stage.Stage;
 public class WindowMain extends Application {
 
     private BorderPane mainPane = new BorderPane();
-
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("Sall Whisky Inventory Management");
@@ -25,7 +24,6 @@ public class WindowMain extends Application {
         stage.show();
         initGUI();
     }
-
     private void initGUI(){
 
         mainPane.getStylesheets().add(getClass().getResource("/Stylesheets/Dark.css").toExternalForm());
@@ -38,6 +36,8 @@ public class WindowMain extends Application {
         initContextPane();
     }
 
+
+    //region Header
     private VBox headerPane = new VBox();
     private HBox hbxPathButtonContainer = new HBox();
     private void initHeader(){
@@ -48,19 +48,76 @@ public class WindowMain extends Application {
         lblTitle.getStyleClass().add("main-title");
         vbxTitle.getChildren().add(lblTitle);
 
-        Button btnRoot = new PathButton("/");
-
         hbxPathButtonContainer.getStyleClass().add("path-container");
         hbxPathButtonContainer.setAlignment(Pos.BOTTOM_CENTER);
         hbxPathButtonContainer.maxWidthProperty().bind(mainPane.widthProperty().divide(2));
+        addSpacer();
 
+        hbxPathButtonContainer.setAlignment(Pos.BASELINE_LEFT);
 
         headerPane.getChildren().addAll(vbxTitle, hbxPathButtonContainer);
         headerPane.getStyleClass().add("overlay-pane");
         headerPane.setPrefHeight(100);
         headerPane.setAlignment(Pos.TOP_CENTER);
     }
+    private void buttonFactory(){
 
+    }
+    private void addButton(){
+
+    }
+    private void addSpacer(){
+        Button btnRoot = new PathButton(">");
+        btnRoot.getStyleClass().add("path-button");
+        hbxPathButtonContainer.getChildren().add(btnRoot);
+    }
+    //endregion
+
+    //region Center
+    private void initCenter(){
+
+    }
+
+
+    //endregion
+
+    //region Right
+    private VBox contextPane = new VBox(10);
+    private void initContextPane(){
+        contextPane.getStyleClass().add("context-pane");
+        contextPane.setPrefWidth(125);
+        contextPane.setAlignment(Pos.CENTER);
+        contextPane.setPadding(new Insets(10));
+
+        VBox vbxNonContext = new VBox();
+        //region non-context area
+        Label lblSpacer = new Label("---");
+        lblSpacer.getStyleClass().add("subtle-text");
+
+        Button btnTest = new Button("Test button");
+        btnTest.getStyleClass().add("button");
+        vbxNonContext.getChildren().addAll(lblSpacer, btnTest);
+        vbxNonContext.setAlignment(Pos.BOTTOM_CENTER);
+
+        VBox vbxNull = new VBox();
+        contextPane.getChildren().addAll(vbxNull, vbxNonContext);
+        VBox.setVgrow(vbxNull, Priority.ALWAYS);
+        //endregion
+    }
+    public void setContextPaneButtons(Object entry){
+        contextPane.getChildren().remove(0);
+        contextPane.getChildren().add(0, ContextButtons.getContextButtons(entry));
+    }
+    private void setContextMenuContent(Node node){
+        //TODO:
+        //Takes parameter for which item is selected, or which submenu is loaded
+        //Default of no item selected
+        //Below is a "---" seperated vbox of buttons for the section (mostly just an add entry button)
+        //Header of the menu is for selected item (same as tooltip)
+    }
+    //endregion
+
+    //region Footer
     private HBox footerPane = new HBox();
     private void initFooter(){
         footerPane.getStyleClass().add("overlay-pane");
@@ -84,49 +141,9 @@ public class WindowMain extends Application {
         footerPane.getChildren().addAll(hbxZoom, lblContent);
 
     }
-
-    private VBox contextPane = new VBox(10);
-    private void initContextPane(){
-        contextPane.getStyleClass().add("context-pane");
-        contextPane.setPrefWidth(125);
-        contextPane.setAlignment(Pos.CENTER);
-        contextPane.setPadding(new Insets(10));
-
-        VBox vbxNonContext = new VBox();
-        //region non-context area
-        Label lblSpacer = new Label("---");
-        lblSpacer.getStyleClass().add("subtle-text");
-
-        Button btnTest = new Button("Test button");
-        btnTest.getStyleClass().add("button");
-        vbxNonContext.getChildren().addAll(lblSpacer, btnTest);
-        vbxNonContext.setAlignment(Pos.BOTTOM_CENTER);
-
-        VBox vbxNull = new VBox();
-        contextPane.getChildren().addAll(vbxNull, vbxNonContext);
-        VBox.setVgrow(vbxNull, Priority.ALWAYS);
-        //endregion
-    }
-
-    public void setContextPaneButtons(Object entry){
-        contextPane.getChildren().remove(0);
-        contextPane.getChildren().add(0, ContextButtons.getContextButtons(entry));
-    }
-
     private void updateFooterLabel(){
-
+        //TODO:
     }
-
-    private void buttonFactory(){
-
-    }
-
-
-    private void setContextMenuContent(Node node){
-        //Takes parameter for which item is selected, or which submenu is loaded
-        //Default of no item selected
-        //Below is a "---" seperated vbox of buttons for the section (mostly just an add entry button)
-        //Header of the menu is for selected item (same as tooltip)
-    }
+    //endregion
 
 }

@@ -6,9 +6,10 @@ public class Entry extends Button {
 
     WindowMain window;
     Object entry;
-    public Entry(WindowMain window){
+    public Entry(WindowMain window, Object entry){
         this.window = window;
         this.setOnAction(event -> entryAction());
+        this.entry = entry;
     }
 
     private void entryAction(){

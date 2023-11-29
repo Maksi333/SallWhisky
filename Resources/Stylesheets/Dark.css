@@ -44,16 +44,19 @@
 
 .path-container {
     -fx-background-color: #2e3b4e;
-    -fx-padding: 10;
-    -fx-spacing: 10;
+    -fx-padding: 5;
+    -fx-spacing: 5;
 }
 
 .path-button {
+    -fx-font-size: 10px;
     -fx-background-color: transparent; -fx-border-color: transparent;
+    -fx-max-height: 20px;
 }
 
 .path-button:hover {
-    -fx-background-color: lightgray;
+    -fx-font-size: 10px;
+    -fx-background-color: rgba(128, 128, 128, 0.5);
 }
 
 /* Text Style */
